@@ -112,7 +112,7 @@ h3 {
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /*Centrar el nav para mobile*/
 }
 @media (min-width: 768px) { 
     .nav-principal {
@@ -131,7 +131,12 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
-  height: 55rem;
+  height: 25rem;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 55rem;
+  }
 }
 /* -----------------Box Model--------------------------------*/
 .text-center {
@@ -182,16 +187,34 @@ h3 {
   background-position: left center;
   background-size: 100%, 100rem;
 }
-
+@media (min-width: 1200px) {
+  .sobre-nosotros{
+    margin: 5rem auto;
+    max-width: 180rem;
+  }
+}
 .sobre-nosotros-grid {
   display: flex;
   justify-content: flex-end;
 }
 
 .texto-nosotros {
-  flex-basis: 50%;
+  flex-basis: 60%;
   padding-left: 12rem;
   color: #e1e1e1;
+}
+@media (min-width: 1200px) {
+  .texto-nosotros{
+    padding-left: 25rem;
+  }
+
+  .texto-nosotros h2 {
+    font-size: 5rem;
+  }
+
+  .texto-nosotros p {
+    font-size: 2rem;
+  }
 }
 .boton-section {
   display: grid;
@@ -200,7 +223,7 @@ h3 {
 
 .boton-conocer-mas {
   font-family: "Puppies Play", cursive;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #e1e1e1;
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -208,11 +231,19 @@ h3 {
   cursor: pointer;
   overflow: hidden;
   outline: none;
-  flex-basis: 50%;
-  grid-column: 3/4;
+  flex-basis: 60%;
+  grid-column: 2/4;
+  margin: 0 auto;
 }
 .boton-conocer-mas:hover {
   color: #000;
+}
+@media (min-width: 768px) {
+  .boton-conocer-mas {
+    font-size: 4rem;
+    flex-basis: 50%;
+    grid-column: 3/4;
+  }
 }
 
 
