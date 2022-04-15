@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Blog</title>
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/app.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="nombre-sitio">Tienda <span> Muebles </span></h1>
+    </header>
+
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenido-principal contenedor ">
+        <h2 class="text-center">Nuestro Blog</h2>
+        <!--Creamos el div con clase blog para que cuando le pusieramos estilo en css nos pudiera cumplir con los requisitos que necesitamos 
+        por ejemplo, para acomodar el aside del lado derecho lo hicimos con css grid y recordamos que css grid nos pide ser aplicado en el contenedor 
+        "padre" para ser aplicado a los hijos en este caso los hijos son "blog" y "aside"-->
+        <section class="contenedor-blog">
+            <div class="blog"> 
+                <article class="entrada">
+                    <h2 class="">Guia de colores</h2>
+
+                    <div class="imagen">
+                        <img src="../img/nosotros.jpg" alt="Imagen blog">
+                    </div>
+                    <div class="contenido-blog">
+                        <div class="entrada-meta">
+                            <p>Fecha: <span>14 de Dicimebre del 2022</span></p>
+                            <p>Escrito por: <span>Muebleria Cuernamoda</span></p>   
+                    </div>
+                    <div class="entrada-blog">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Facilis fugiat blanditiis exercitationem neque beatae aut velit esse. Perferendis, unde. 
+                            Quos eius nobis expedita rerum. Aperiam dolor aliquam aliquid nesciunt autem?</p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nam debitis deserunt aliquid nobis quo sed fugit, mollitia sequi quas magni repellat reiciendis, modi vitae laborum voluptate consectetur? Accusamus, tempore.
+                        </p>
+                    </div>
+                    <!--Comentario sobre el boton en el css-->
+                    <a class="btn max-width-30" href="entrada.html">Leer</a>
+
+                </article>
+                <article class="entrada">
+                    <h2 class="">Guia de colores</h2>
+                
+                    <div class="imagen">
+                        <img src="../img/nosotros.jpg" alt="Imagen blog">
+                    </div>
+                    <div class="contenido-blog">
+                        <div class="entrada-meta">
+                            <p>Fecha: <span>14 de Dicimebre del 2022</span></p>
+                            <p>Escrito por: <span>Muebleria Cuernamoda</span></p>
+                        </div>
+                        <div class="entrada-blog">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis fugiat blanditiis exercitationem neque beatae aut velit esse. Perferendis, unde.
+                                Quos eius nobis expedita rerum. Aperiam dolor aliquam aliquid nesciunt autem?</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nam debitis deserunt aliquid nobis quo
+                                sed fugit, mollitia sequi quas magni repellat reiciendis, modi vitae laborum voluptate consectetur?
+                                Accusamus, tempore.
+                            </p>
+                        </div>
+                
+                        <a class="btn max-width-30" href="entrada.html">Leer</a>
+                
+                </article>
+            </div>
+        </div>
+
+            <aside>
+                <h3>Otras entradas de blog</h3>
+                <ul>
+                    <li><a href="entrada.html">Guia de colores</a></li>
+                    <li><a href="entrada.html">Nuevos Modelos</a></li>
+                    <li><a href="entrada.html">Guia para disenos de interiores</a></li>
+                    <li><a href="entrada.html">Guia para diseno de exteriores</a></li>
+                </ul>
+
+            </aside>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorías</h3>
+                <nav class="footer-menu">
+                    <a href="#">Cocina</a>
+                    <a href="#">Oficina</a>
+                    <a href="#">Jardín</a>
+                    <a href="#">Cochera</a>
+                    <a href="#">Dormitorios</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Sobre Nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Carreras</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Confianza y Seguridad</a>
+                </nav>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos Reservados, TiendaMuebles by Iran Aguirre</p>
+    </footer>
+</body>
+
+</html>
