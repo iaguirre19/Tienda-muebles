@@ -9,28 +9,23 @@ html {
   box-sizing: inherit;
 }
 /**------------------ Globales-----------------------**/
-
 body {
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
   line-height: 2; 
 }
-
 a {
   color: black;
   text-decoration: none;
 }
-
 .contenedor { 
   max-width: 120rem;
   margin: 0 auto;
 }
-
 img { 
   max-width: 100%;
   display: block;
 }
-
 h1,
 h2,
 h3 {
@@ -61,7 +56,6 @@ h3 {
         font-size: 3rem;
     }
 }
-
 .btn {
   background-color: #8cbc00; 
   display: block; 
@@ -73,7 +67,6 @@ h3 {
   text-align: center; 
   border: none; 
 }
-
 .btn:hover {
   background-color: #769c02; 
   cursor: pointer;
@@ -92,7 +85,6 @@ h3 {
         max-width: 30rem;
     }
 }
-
 /**---------------------------Header and nav-------------------------------------**/
 .nombre-sitio {
   /*Esto es para el titulo*/
@@ -120,12 +112,10 @@ h3 {
         flex-direction: row;
     }
 }
-
 .nav-principal a {
   font-size: 2rem;
   text-transform: capitalize;
 }
-
 .hero {
   background-image: url(../img/principal.jpg);
   background-repeat: no-repeat;
@@ -144,16 +134,17 @@ h3 {
   padding: 3rem 0rem 1rem 0rem;
   text-transform: uppercase;
 }
-
-
 /*------------------------------CATEGORIAS----------------*/
 .categorias {
-  padding: 5rem;
+  padding: 5rem 0;
 }
-.listado-categorias {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+@media (min-width: 768px) {
+  .categoria {
+  margin-bottom: 2rem 0;
+}
+}
+.categoria img{
+  width: 100%;
 }
 .categoria a {
   text-align: center;
@@ -161,19 +152,30 @@ h3 {
   padding: 1rem;
   font-size: 2rem;
 }
-
 .categoria a:hover {
   background-color: #037bc0;
   color: white;
   border-bottom-right-radius: 2rem;
 }
-
+@media (min-width: 768px) {
+  .listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;  
+  }
+}
 .categoria h2 {
   text-align: center;
 }
-
 /*--------------------SOBRE NOSOTROS------------------------*/
 .sobre-nosotros {
+  background-image: linear-gradient(to bottom,transparent 50%,#037bc0 50%,#037bc0 100%),url(../img/nosotros.jpg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100%, 70rem;
+}
+@media (min-width: 768px) {
+  .sobre-nosotros {
   background-image: linear-gradient(
       to right,
       transparent 50%,
@@ -181,11 +183,10 @@ h3 {
       #037bc0 100%
     ),
     url(../img/nosotros.jpg);
-  margin-top: 5rem;
-  padding: 4rem 0;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 100%, 100rem;
+    padding: 7rem 0;
+    background-position: left center;
+    background-size: 100%, 160rem;
+  }
 }
 @media (min-width: 1200px) {
   .sobre-nosotros{
@@ -194,33 +195,30 @@ h3 {
   }
 }
 .sobre-nosotros-grid {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
 }
-
+@media (min-width: 768px) {
+  .sobre-nosotros-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: unset;
+      column-gap: 10rem;
+  }
+}
 .texto-nosotros {
-  flex-basis: 60%;
-  padding-left: 12rem;
+  grid-row: 2/3;
   color: #e1e1e1;
+  padding: 5rem;
 }
-@media (min-width: 1200px) {
-  .texto-nosotros{
-    padding-left: 25rem;
-  }
-
-  .texto-nosotros h2 {
-    font-size: 5rem;
-  }
-
-  .texto-nosotros p {
-    font-size: 2rem;
+@media (min-width: 768px) {
+  .texto-nosotros {
+    grid-column: 2/3;
   }
 }
 .boton-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .boton-conocer-mas {
   font-family: "Puppies Play", cursive;
   font-size: 3rem;
@@ -232,7 +230,7 @@ h3 {
   overflow: hidden;
   outline: none;
   flex-basis: 60%;
-  grid-column: 2/4;
+  grid-column: 3/4;
   margin: 0 auto;
 }
 .boton-conocer-mas:hover {
@@ -242,161 +240,163 @@ h3 {
   .boton-conocer-mas {
     font-size: 4rem;
     flex-basis: 50%;
-    grid-column: 3/4;
+    grid-column: 4/5;
   }
 }
-
-
 /*----------------------Lista productos-----------------*/
-
 .contenido-principal {
   padding-top: 5rem;
 }
-
+@media (min-width: 768px) {
+  .listado-productos {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 2rem;
+  }
+  .producto:nth-child(1) {
+      grid-column: 1/7;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+  }
+  .producto:nth-child(1) img {
+      height: 43rem;
+      width: 100%;
+      object-fit: cover;
+  }
+  .producto:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+  .producto:nth-child(2) img,
+  .producto:nth-child(3) img {
+      height: 30rem;
+      width: 100%;
+      object-fit: cover;
+  }
+  .producto:nth-child(3) {
+      grid-column-start: 4;
+      grid-column-end: 7;
+  }
+  .producto:nth-child(4) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+  }
+  .producto:nth-child(5) {
+      grid-column-start: 3;
+      grid-column-end: 5;
+  }
+  .producto:nth-child(6) {
+      grid-column-start: 5;
+      grid-column-end: 7;
+  }
+}
+.producto {
+  background-color: #037bc0;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .producto {
+    margin-bottom: 0;
+  }
+}
+.producto:last-of-type{
+  margin-bottom: 0;
+}
+.producto img:hover {
+  transform: scale(0.8);
+}
 .texto-producto {
   text-align: center;
   color: white;
   padding: 2rem;
 }
-
 .texto-producto h3 {
   margin: 0;
   text-transform: uppercase;
 }
-
 .texto-producto:nth-child(1) h3 {
   text-align: end;
 }
-
 .texto-producto p {
   margin: 0 0 0.5rem;
 }
-
 .texto-producto .precio {
   font-size: 4rem;
 }
-
-.producto {
-  background-color: #037bc0;
-}
-
-
-.producto img:hover {
-  transform: scale(0.8);
-}
-
-.listado-productos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;
-}
-
-.producto:nth-child(1) {
-  grid-column: 1/7;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
-
-.producto:nth-child(1) img {
-  height: 43rem;
-  width: 100%;
-  object-fit: cover;
-}
-.producto:nth-child(2) {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-.producto:nth-child(2) img,
-.producto:nth-child(3) img {
-  height: 30rem;
-  width: 100%;
-  object-fit: cover;
-}
-
-.producto:nth-child(3) {
-  grid-column-start: 4;
-  grid-column-end: 7;
-}
-
-.producto:nth-child(4) {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-.producto:nth-child(5) {
-  grid-column-start: 3;
-  grid-column-end: 5;
-}
-.producto:nth-child(6) {
-  grid-column-start: 5;
-  grid-column-end: 7;
-}
-
-
-.site-footer h3 {
-  margin-bottom: 0.5rem;
-}
+/*--------Footer--------------*/
 .site-footer {
   border-top: 1px solid #e1e1e1;
   margin-top: 5rem;
   padding-top: 5rem;
 }
-.grid-footer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.site-footer h3 {
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
-
+@media (min-width: 768px) {
+  .grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .site-footer h3 {
+    text-align: left;
+  }
+}
+.grid-footer > div {
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .grid-footer > div {
+    margin: 0;
+  }
+}
 .footer-menu a {
   display: block;
+  text-align: center;
 }
-
+@media (min-width: 768px) { 
+    .footer-menu a {
+        text-align: left;
+    }
+}
 .copyright {
   text-align: center;
   margin-top: 5rem;
 }
-
 /*-----------Nosotros--------------*/
-
 .contenido-nosotros {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   column-gap: 4rem;
 }
-
 .informacion-nosotros {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 /*----------------BLOG--------------*/
-
 .contenedor-blog {
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 4rem;
 }
-
 .entrada {
   border-bottom: 2px solid #e1e1e1;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
 }
-
 .entrada:last-of-type {
   border: none;
 }
-
 .entrada-meta {
   display: flex;
   justify-content: space-between;
 }
-
 .entrada-meta p {
   font-weight: bold;
 }
-
 .entrada-meta span {
   color: #037bc0;
 }
@@ -404,10 +404,7 @@ h3 {
   width: 60rem;
   margin: 0 auto;
 }
-
-
 /*------------------------------------Galeria-----------------------*/
-
 .galeria {
   list-style: none; 
   margin: 0;
@@ -416,21 +413,17 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
 .galeria img {
   height: 42rem;
   width: 42rem;
   object-fit: cover;
 }
-
-
 /*Formularios*/
 
 .formulario {
   max-width: 60rem;
   margin: 0 auto; 
 }
-
 .formulario fieldset {
   border-color: black;
   border-width: .1rem;
