@@ -65,12 +65,14 @@ h3 {
   padding: 1rem; 
   transition: background-color .3s ease-in-out;   
   text-align: center; 
-  border: none; 
+  border: none;
+  width: 100%; 
 }
 .btn:hover {
   background-color: #769c02; 
   cursor: pointer;
 }
+/*Esto ayuda a que el boton de enviar formulario en resolution mayor a 768px se quede en la direccion izquierda como lo habiamos puesto */
 @media (min-width: 768px) { 
     .btn {
         width: auto;
@@ -375,24 +377,46 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 5rem;
+}
+@media (min-width: 768px) {
+  .informacion-nosotros {
+    padding: 0;
+  }
 }
 /*----------------BLOG--------------*/
-.contenedor-blog {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 4rem;
+@media (min-width: 768px) {
+  .contenedor-blog {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+  }
 }
+
 .entrada {
   border-bottom: 2px solid #e1e1e1;
   padding-bottom: 4rem;
   margin-bottom: 2rem;
 }
+.entrada h2 {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .entrada h2 {
+    text-align: left;
+  }
+}
 .entrada:last-of-type {
   border: none;
 }
-.entrada-meta {
-  display: flex;
-  justify-content: space-between;
+.contenido-blog {
+    padding: 2rem;
+}
+@media (min-width: 768px) { 
+    .entrada-meta {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .entrada-meta p {
   font-weight: bold;
@@ -410,8 +434,13 @@ h3 {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
+}
+@media (min-width: 768px) {
+  .galeria {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
 .galeria img {
   height: 42rem;
